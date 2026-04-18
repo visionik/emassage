@@ -1,0 +1,181 @@
+{
+  "vBRIEFInfo": { "version": "0.5" },
+  "plan": {
+    "title": "emassage SPECIFICATION",
+    "status": "approved",
+    "narratives": {
+      "Overview": "Satirical single-page static website for 'Epstein's Olde Fashioned Pervy Massages' — a parody business that brings professional rigour and best practices to the historically unreliable world of pervy massages. Six sections: Home, Mission, Services, About, Testimonials, Franchising (with interactive qualifying quiz). Built with Next.js (static export), Tailwind CSS, and shadcn/ui. Deployed via Cloudflare Pages on push to GitHub main.",
+      "Architecture": "Next.js 14 app with output: 'export'. Single page (app/page.tsx) composing six section components. Tailwind CSS with custom old-timey theme: deep burgundy (#7B1C2A), aged parchment (#F5E6C8), dark navy (#1A1A2E), gold (#C9A84C). Playfair Display (headings) + EB Garamond (body) via next/font/google. shadcn/ui for Card, Badge, Button, Separator primitives. Franchise quiz is a client-side multi-step component with satirical questions and result rendering. No API routes, no SSR, no server components beyond layout. Taskfile orchestrates lint, format, typecheck, test, build."
+    },
+    "items": [
+      {
+        "id": "phase-1",
+        "title": "Phase 1: Foundation",
+        "status": "pending",
+        "subItems": [
+          {
+            "id": "1.1",
+            "title": "Initialise Next.js 14 project with TypeScript",
+            "status": "pending",
+            "narrative": "Configure next.config.ts with output: 'export' and trailingSlash: true. Add .nvmrc / .node-version. Acceptance: `task build` produces /out directory with static HTML."
+          },
+          {
+            "id": "1.2",
+            "title": "Configure Tailwind CSS with custom old-timey theme",
+            "status": "pending",
+            "narrative": "Extend tailwind.config with custom colours (burgundy, parchment, navy, gold), add Playfair Display and EB Garamond via next/font/google, configure darkMode: 'class'. Traces: NFR-4."
+          },
+          {
+            "id": "1.3",
+            "title": "Install and configure shadcn/ui",
+            "status": "pending",
+            "narrative": "Run shadcn/ui init, add components: Button, Card, CardContent, CardHeader, Badge, Separator. Acceptance: components render without errors."
+          },
+          {
+            "id": "1.4",
+            "title": "Set up Taskfile with dev, build, lint, fmt, typecheck, test, check tasks",
+            "status": "pending",
+            "narrative": "task check must run lint + typecheck + test + build in sequence. Traces: NFR-3."
+          }
+        ]
+      },
+      {
+        "id": "phase-2",
+        "title": "Phase 2: Layout & Navigation",
+        "status": "pending",
+        "subItems": [
+          {
+            "id": "2.1",
+            "title": "Header component with establishment name and anchor navigation",
+            "status": "pending",
+            "narrative": "Sticky header. Logo/wordmark: 'Epstein's Olde Fashioned Pervy Massages' in Playfair Display. Nav links: Home, Mission, Services, About, Testimonials, Franchising — smooth scroll to section anchors. Responsive: collapses to hamburger on mobile. Traces: FR-1, FR-2."
+          },
+          {
+            "id": "2.2",
+            "title": "Footer component",
+            "status": "pending",
+            "narrative": "Est. year, tagline, copyright line. Old-timey styling. Traces: NFR-4."
+          },
+          {
+            "id": "2.3",
+            "title": "Root page layout with section anchors",
+            "status": "pending",
+            "narrative": "app/page.tsx composes all six section components in order. Each wrapped in <section id='...'> for anchor nav. Traces: FR-1."
+          }
+        ]
+      },
+      {
+        "id": "phase-3",
+        "title": "Phase 3: Content Sections",
+        "status": "pending",
+        "subItems": [
+          {
+            "id": "3.1",
+            "title": "Hero / Home section",
+            "status": "pending",
+            "narrative": "Full-viewport hero. Heading: 'Epstein's Olde Fashioned Pervy Massages'. Subheading: 'Est. [year] — Discretion. Process. Results.' CTA button scrolls to Services. Parchment background with burgundy/gold ornamental dividers. Traces: FR-3."
+          },
+          {
+            "id": "3.2",
+            "title": "Mission section",
+            "status": "pending",
+            "narrative": "Copy: the industry has long suffered from inconsistency and lack of oversight; we bring standardised protocols, rigorous intake procedures, and a documented chain of custody to every engagement. Serious corporate tone played entirely straight. Traces: FR-4."
+          },
+          {
+            "id": "3.3",
+            "title": "Services section",
+            "status": "pending",
+            "narrative": "Card grid of satirical service offerings, each with a pompous old-fashioned name, one-line description, and notional price. Examples: 'The Introductory Orientation' (first-time clients only), 'The Island Retreat Package' (by referral only), 'The Executive Discretion Suite' (NDAs provided). Traces: FR-5."
+          },
+          {
+            "id": "3.4",
+            "title": "About section",
+            "status": "pending",
+            "narrative": "The founder's vision: tired of fly-by-night operators and unreliable practitioners, Mr. Epstein sought to codify the art. Short biography written in breathless admiring corporate prose. Photo placeholder (sepia-toned ornamental frame). Traces: FR-6."
+          },
+          {
+            "id": "3.5",
+            "title": "Testimonials section",
+            "status": "pending",
+            "narrative": "3–5 fake glowing testimonials. Clients identified by first name and vague title only ('Prince A., European Royalty', 'W.C., Former President', 'A.D., Tech Visionary'). Quotes praise the professionalism and discretion. Card layout. Traces: FR-7."
+          },
+          {
+            "id": "3.6",
+            "title": "Franchising section — pitch copy",
+            "status": "pending",
+            "narrative": "Opportunity overview: territory rights, onboarding programme, brand standards manual, ongoing compliance audits. Hard review process emphasised — 'not everyone qualifies'. CTA triggers the franchise quiz. Traces: FR-8."
+          }
+        ]
+      },
+      {
+        "id": "phase-4",
+        "title": "Phase 4: Franchise Qualifying Quiz",
+        "status": "pending",
+        "subItems": [
+          {
+            "id": "4.1",
+            "title": "Multi-step quiz component (client-side)",
+            "status": "pending",
+            "narrative": "FranchiseQuiz client component. useState tracks current step and answers. 5–6 satirical multiple-choice questions. Progress indicator. Traces: FR-9, NFR-1."
+          },
+          {
+            "id": "4.2",
+            "title": "Quiz questions and scoring logic",
+            "status": "pending",
+            "narrative": "Questions: (1) 'Do you have access to a private island or equivalent venue?', (2) 'Rate your discretion on a scale of 1–10 — our minimum is 11.', (3) 'How many powerful friends are you prepared to leverage on behalf of the brand?', (4) 'Have you ever operated in a jurisdiction with lax oversight? (This is a plus.)', (5) 'Are you comfortable with a rigorous background check performed exclusively by us?'. Score-based result: >= 4 correct → 'You May Qualify — our team will be in touch'; < 4 → 'Not Quite Ready — we suggest further grooming before reapplying.' Traces: FR-9."
+          },
+          {
+            "id": "4.3",
+            "title": "Quiz result display",
+            "status": "pending",
+            "narrative": "Result card with result text, flavour copy, and a 'Retake Quiz' button. Styled consistently with site theme. Traces: FR-9."
+          }
+        ]
+      },
+      {
+        "id": "phase-5",
+        "title": "Phase 5: Quality & Deployment",
+        "status": "pending",
+        "subItems": [
+          {
+            "id": "5.1",
+            "title": "Unit tests for components and quiz logic",
+            "status": "pending",
+            "narrative": "Vitest + React Testing Library. Test quiz scoring logic, step navigation, result rendering. Test each section renders without errors. Coverage >= 85%. Traces: NFR-3."
+          },
+          {
+            "id": "5.2",
+            "title": "Cloudflare Pages configuration",
+            "status": "pending",
+            "narrative": "Cloudflare Pages project connected to GitHub repo, branch: main, build command: task build (or next build), output dir: out. Add _redirects file if needed for SPA routing. Traces: NFR-2."
+          },
+          {
+            "id": "5.3",
+            "title": "Responsive polish and accessibility",
+            "status": "pending",
+            "narrative": "Verify all sections render correctly on mobile (375px) and desktop (1280px). Semantic HTML (section, nav, h1-h3, aria-labels on quiz). Traces: FR-2."
+          }
+        ]
+      }
+    ],
+    "requirements": {
+      "functional": [
+        { "id": "FR-1", "title": "Single-page layout with smooth-scroll anchor navigation" },
+        { "id": "FR-2", "title": "Fully responsive (mobile + desktop)" },
+        { "id": "FR-3", "title": "Home / hero section with establishment branding" },
+        { "id": "FR-4", "title": "Mission section with satirical professional copy" },
+        { "id": "FR-5", "title": "Services section with satirical menu cards" },
+        { "id": "FR-6", "title": "About section with founder story" },
+        { "id": "FR-7", "title": "Testimonials section with fake client reviews" },
+        { "id": "FR-8", "title": "Franchising section with opportunity pitch" },
+        { "id": "FR-9", "title": "Interactive client-side franchise qualifying quiz" }
+      ],
+      "nonFunctional": [
+        { "id": "NFR-1", "title": "Static export only — no SSR or API routes" },
+        { "id": "NFR-2", "title": "Deployed to Cloudflare Pages via GitHub main branch" },
+        { "id": "NFR-3", "title": ">=85% test coverage; task check passes before every commit" },
+        { "id": "NFR-4", "title": "Old-timey visual aesthetic: burgundy, parchment, gold, serif typography" }
+      ]
+    }
+  }
+}
