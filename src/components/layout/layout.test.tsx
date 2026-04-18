@@ -1,9 +1,10 @@
 import React from "react";
-import { describe, it, expect, vi } from "vitest";
+import { describe, it, expect, vi, beforeEach } from "vitest";
 import { render, screen, fireEvent } from "@testing-library/react";
 
 import { SiteHeader } from "./site-header";
 import { SiteFooter } from "./site-footer";
+import { CookieBanner } from "./cookie-banner";
 
 describe("SiteHeader", () => {
   it("renders the wordmark", () => {
@@ -80,5 +81,38 @@ describe("SiteFooter", () => {
     render(<SiteFooter />);
     const link = screen.getByRole("link", { name: /national human trafficking hotline/i });
     expect(link).toHaveAttribute("href", "https://humantraffickinghotline.org");
+  });
+});
+
+describe("CookieBanner", () => {
+  beforeEach(() => {
+    localStorage.clear();
+  });
+
+  it("shows the banner when localStorage has no entry", async () => {
+    render(<CookieBanner />);
+    // useEffect fires after paint — wait for the dialog to appear
+    await screen.findByRole("dialog", { name: /cookie consent/i });
+    expect(screen.getByText(/parties who prefer not to be named/i)).toBeInTheDocument();
+  });
+
+  it("hides when Accept is clicked", async () => {
+    render(<CookieBanner />);
+    await screen.findByRole("dialog");
+    fireEvent.click(screen.getByRole("button", { name: /accept cookies/i }));
+    expect(screen.queryByRole("dialog")).not.toBeInTheDocument();
+  });
+
+  it("hides when 'What choice do I have?' is clicked", async () => {
+    render(<CookieBanner />);
+    await screen.findByRole("dialog");
+    fireEvent.click(screen.getByRole("button", { name: /dismiss cookie notice/i }));
+    expect(screen.queryByRole("dialog")).not.toBeInTheDocument();
+  });
+
+  it("does not show when localStorage entry exists", () => {
+    localStorage.setItem("epsteins-cookies-accepted", "yes");
+    render(<CookieBanner />);
+    expect(screen.queryByRole("dialog")).not.toBeInTheDocument();
   });
 });

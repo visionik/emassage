@@ -40,6 +40,12 @@ export const TESTIMONIALS: Testimonial[] = [
     name: "B.C.",
     title: "Distinguished Philanthropist",
   },
+  {
+    quote:
+      "I was skeptical. Then I was a client. Then I was not asked about it by investigators. Five stars.",
+    name: "G.M.",
+    title: "Former State Governor",
+  },
 ];
 
 /** Testimonials card grid */

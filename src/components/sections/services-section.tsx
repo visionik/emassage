@@ -47,9 +47,16 @@ export const SERVICES: Service[] = [
     badge: "Best Value",
   },
   {
+    name: "The Legacy Arrangement",
+    description:
+      "For clients with reputational concerns extending beyond their natural lifespan. Includes document management, narrative control, estate pre-planning, and complimentary obituary optimisation. Demand has increased sharply since 2019.",
+    price: "$12,000",
+    badge: "Growing Demand",
+  },
+  {
     name: "The In-Flight Arrangement",
     description:
-      "Massage services delivered exclusively at altitude aboard our private fleet. Discretion is easier at 35,000 feet. Flight logs are maintained to our usual standard — meticulously, and mysteriously absent. Some passengers board voluntarily. We note this because we have been asked."
+      "Massage services delivered exclusively at altitude aboard our private fleet. Discretion is easier at 35,000 feet. Flight logs are maintained to our usual standard — meticulously, and mysteriously absent. Some passengers board voluntarily. We note this because we have been asked.",
     price: "Complimentary",
     badge: "With Island Package",
   },
