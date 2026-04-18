@@ -1,0 +1,64 @@
+version: "3"
+
+vars:
+  SRC: src
+
+tasks:
+  default:
+    desc: List all available tasks
+    cmds:
+      - task --list
+    silent: true
+
+  dev:
+    desc: Start Next.js development server
+    cmds:
+      - npm run dev
+
+  build:
+    desc: Build static export to out/
+    cmds:
+      - npm run build
+
+  lint:
+    desc: Run ESLint
+    cmds:
+      - npm run lint
+
+  fmt:
+    desc: Format source files with Prettier
+    cmds:
+      - npm run fmt
+
+  typecheck:
+    desc: Run TypeScript type checker (no emit)
+    cmds:
+      - npm run typecheck
+
+  test:
+    desc: Run tests once
+    cmds:
+      - npm run test
+
+  test:watch:
+    desc: Run tests in watch mode
+    cmds:
+      - npm run test:watch
+
+  test:coverage:
+    desc: Run tests with coverage report
+    cmds:
+      - npm run test:coverage
+
+  check:
+    desc: "Pre-commit gate: lint + typecheck + test + build"
+    cmds:
+      - task: lint
+      - task: typecheck
+      - task: test:coverage
+      - task: build
+
+  clean:
+    desc: Remove build artifacts
+    cmds:
+      - rm -rf out .next
