@@ -30,6 +30,37 @@ export function SiteFooter(): React.JSX.Element {
           is entirely the point.
         </p>
       </div>
+
+      {/* Sincere disclosure — clearly separated from satirical content */}
+      <div className="border-t border-parchment/10 bg-black/30 px-4 py-5 text-center">
+        <p className="text-xs text-parchment/70 max-w-2xl mx-auto leading-relaxed">
+          While this site tries to be funny, there is nothing funny about sex trafficking.
+          If you or someone you know needs help,{" "}
+          <a
+            href="https://humantraffickinghotline.org"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline text-parchment hover:text-gold transition-colors"
+          >
+            contact the National Human Trafficking Hotline
+          </a>
+          {" "}— call or text{" "}
+          <a
+            href="tel:18883737888"
+            className="underline text-parchment hover:text-gold transition-colors"
+          >
+            1-888-373-7888
+          </a>
+          , or text &ldquo;HELP&rdquo; to{" "}
+          <a
+            href="sms:233733"
+            className="underline text-parchment hover:text-gold transition-colors"
+          >
+            233733
+          </a>
+          . Free, confidential, 24/7.
+        </p>
+      </div>
     </footer>
   );
 }

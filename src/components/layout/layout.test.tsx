@@ -70,4 +70,15 @@ describe("SiteFooter", () => {
     render(<SiteFooter />);
     expect(screen.getByText(/epsteinsmassage\.com/i)).toBeInTheDocument();
   });
+
+  it("renders the human trafficking disclosure", () => {
+    render(<SiteFooter />);
+    expect(screen.getByText(/nothing funny about sex trafficking/i)).toBeInTheDocument();
+  });
+
+  it("renders the hotline link", () => {
+    render(<SiteFooter />);
+    const link = screen.getByRole("link", { name: /national human trafficking hotline/i });
+    expect(link).toHaveAttribute("href", "https://humantraffickinghotline.org");
+  });
 });
