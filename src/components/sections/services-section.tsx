@@ -46,6 +46,13 @@ export const SERVICES: Service[] = [
     price: "$3,500 / mo",
     badge: "Best Value",
   },
+  {
+    name: "The In-Flight Arrangement",
+    description:
+      "Massage services delivered exclusively at altitude aboard our private fleet. Discretion is easier at 35,000 feet. Flight logs are maintained to our usual standard — meticulously, until they are not. Passengers board voluntarily. We note this because we have been asked.",
+    price: "Complimentary",
+    badge: "With Island Package",
+  },
 ];
 
 /** Services card grid */
