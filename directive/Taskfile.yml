@@ -1,0 +1,91 @@
+version: '3'
+
+vars:
+  PROJECT_NAME: deft
+  VERSION: 0.19.0
+
+includes:
+  core:
+    taskfile: ./tasks/core.yml
+    optional: true
+  spec:
+    taskfile: ./tasks/spec.yml
+    optional: true
+  install:
+    taskfile: ./tasks/install.yml
+    optional: true
+  deployments:
+    taskfile: ./tasks/deployments.yml
+    optional: true
+  toolchain:
+    taskfile: ./tasks/toolchain.yml
+    optional: true
+  verify:
+    taskfile: ./tasks/verify.yml
+    optional: true
+  change:
+    taskfile: ./tasks/change.yml
+    optional: true
+  commit:
+    taskfile: ./tasks/commit.yml
+    optional: true
+
+tasks:
+  default:
+    desc: List all available tasks
+    cmds:
+      - task --list
+    silent: true
+
+  # Backward-compatible aliases -- project convention is `task check`, `task test`, etc.
+  check:
+    desc: Run all pre-commit checks
+    deps:
+      - core:validate
+      - core:lint
+      - core:test
+      - toolchain:check
+      - verify:stubs
+      - verify:links
+    cmds:
+      - echo "All checks passed"
+  test:
+    desc: Run test suite (alias for core:test)
+    cmds:
+      - task: core:test
+  test:coverage:
+    desc: Run tests with coverage (alias for core:test:coverage)
+    cmds:
+      - task: core:test:coverage
+  lint:
+    desc: Lint and type-check Python code (alias for core:lint)
+    cmds:
+      - task: core:lint
+  fmt:
+    desc: Format Python code (alias for core:fmt)
+    cmds:
+      - task: core:fmt
+  build:
+    desc: Package framework for distribution (alias for core:build)
+    cmds:
+      - task: core:build
+  clean:
+    desc: Clean generated artifacts (alias for core:clean)
+    cmds:
+      - task: core:clean
+  validate:
+    desc: Validate all markdown files (alias for core:validate)
+    cmds:
+      - task: core:validate
+  install:
+    desc: Install deft (alias for install:install)
+    cmds:
+      - task: install:install
+  uninstall:
+    desc: Remove deft entry from AGENTS.md (alias for install:uninstall)
+    cmds:
+      - task: install:uninstall
+  stats:
+    desc: Show framework statistics (alias for core:stats)
+    cmds:
+      - task: core:stats
