@@ -49,7 +49,7 @@ export const SERVICES: Service[] = [
   {
     name: "The In-Flight Arrangement",
     description:
-      "Massage services delivered exclusively at altitude aboard our private fleet. Discretion is easier at 35,000 feet. Flight logs are maintained to our usual standard — meticulously, and mysteriously absent. Passengers board voluntarily. We note this because we have been asked."
+      "Massage services delivered exclusively at altitude aboard our private fleet. Discretion is easier at 35,000 feet. Flight logs are maintained to our usual standard — meticulously, and mysteriously absent. Some passengers board voluntarily. We note this because we have been asked."
     price: "Complimentary",
     badge: "With Island Package",
   },
