@@ -49,7 +49,7 @@ export const SERVICES: Service[] = [
   {
     name: "The Legacy Arrangement",
     description:
-      "For clients with reputational concerns extending beyond their natural lifespan. Includes document management, narrative control, estate pre-planning, and complimentary obituary optimisation. Demand has increased sharply since 2019.",
+      "For clients with reputational concerns extending beyond their natural lifespan. Includes document management, narrative control, estate pre-planning, and complimentary obituary optimisation. Demand has increased sharply since 2019. Coincidence.",
     price: "$12,000",
     badge: "Growing Demand",
   },

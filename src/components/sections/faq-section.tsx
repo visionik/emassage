@@ -11,7 +11,7 @@ export const FAQ_ITEMS: FaqItem[] = [
   {
     question: "Did Mr. Epstein kill himself?",
     answer:
-      "That is not a question we answer on this website.",
+      "We respect the official findings of the United States Department of Justice.",
   },
   {
     question: "Is Epstein's Olde Fashioned Pervy Massages currently under investigation?",
@@ -20,8 +20,7 @@ export const FAQ_ITEMS: FaqItem[] = [
   },
   {
     question: "Is this legal?",
-    answer:
-      "That depends entirely on which island you are on. Our legal team operates across multiple jurisdictions and has opinions on all of them. Those opinions are confidential.",
+    answer: "Define \u2018this.\u2019",
   },
   {
     question: "How do I book an appointment?",
@@ -30,8 +29,7 @@ export const FAQ_ITEMS: FaqItem[] = [
   },
   {
     question: "What happened to your client records?",
-    answer:
-      "They are stored in a secure location. We are unable to specify where, as we do not know. This is by design.",
+    answer: "Which client records?",
   },
   {
     question: "Are your services available to everyone?",
@@ -41,7 +39,7 @@ export const FAQ_ITEMS: FaqItem[] = [
   {
     question: "Do you offer gift certificates?",
     answer:
-      "We do not. Gifting an Epstein's experience without prior vetting of the recipient is a violation of our onboarding protocol and, in several jurisdictions, other things.",
+      "Yes. They self-destruct after one use.",
   },
 ];
 

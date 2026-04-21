@@ -35,7 +35,7 @@ export const LOCATIONS: Location[] = [
     region: "Paris, France",
     status: "European Office",
     hours: "Closed 2019",
-    note: "Records not available. Staff not available. Manager not available for comment.",
+    note: "Records not available. Staff not available. Manager not available for comment. Records available upon court order that will never be issued.",
   },
   {
     name: "Undisclosed",

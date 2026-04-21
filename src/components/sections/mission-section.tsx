@@ -12,6 +12,12 @@ export function MissionSection(): React.JSX.Element {
           Our Mission
         </p>
 
+        {/* Lead pull-quote — the single best line */}
+        <blockquote className="font-display text-2xl sm:text-3xl italic text-gold leading-snug mb-8 px-4">
+          &ldquo;He saw a gap in the market and, with characteristic boldness,
+          inserted himself into it.&rdquo;
+        </blockquote>
+
         <h2 className="font-display text-4xl sm:text-5xl font-bold text-parchment mb-6">
           A Higher Standard of Perversion
         </h2>
@@ -26,30 +32,16 @@ export function MissionSection(): React.JSX.Element {
           <p>
             For too long, the industry of personalised massage services has been
             plagued by inconsistency, improvisation, and a troubling absence of
-            documentation. Operators have worked without oversight. Clients have
-            suffered the indignity of unpredictable outcomes. Standards — where
-            they existed at all — were informal, unverified, and entirely
-            unenforced.
+            documentation. Standards — where they existed at all — were informal,
+            unverified, and entirely unenforced.
           </p>
 
           <p>
             <strong className="text-gold">Epstein&apos;s Olde Fashioned Pervy Massages</strong>{" "}
-            was established to correct this. We have developed the industry&apos;s
-            first comprehensive intake protocol, a rigorous practitioner
-            vetting programme, and a fully documented chain of custody for
-            every engagement. Nothing is left to chance. Nothing is left
-            undocumented.
-          </p>
-
-          <p>
-            Our proprietary{" "}
-            <em className="text-gold not-italic font-semibold">
-              Epstein Compliance Framework™
-            </em>{" "}
-            ensures that each service is delivered according to exact
-            specification, with all parties fully briefed, all records
-            meticulously maintained, and all outcomes traceable to their
-            origin. Because you deserve better than improvisation.
+            was established to correct this. We brought the industry&apos;s first
+            comprehensive intake protocol, a rigorous practitioner vetting programme,
+            and a fully documented chain of custody. Nothing is left to chance.
+            Nothing is left undocumented.
           </p>
 
           <p className="text-center text-xl italic text-gold pt-4">

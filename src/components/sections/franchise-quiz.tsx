@@ -28,34 +28,34 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
   },
   {
     question:
-      "Rate your discretion on a scale of 1 to 10. Our minimum is 11.",
+      "Do you have at least three sitting heads of state who will vouch for you in writing, then immediately deny it?",
     options: [
-      "11. I have never confirmed my own name to authorities.",
-      "8 — solid, but I've talked in my sleep.",
-      "5 — I try, but wine is involved most evenings.",
-      "I'm on social media. Publicly.",
+      "Yes. Written statements prepared and ready to destroy.",
+      "Two — but one is currently under indictment.",
+      "One. He is a councillor. He is very supportive.",
+      "I prefer character references from my employer.",
     ],
     qualifyingIndex: 0,
   },
   {
     question:
-      "How many powerful friends are you prepared to leverage on behalf of the brand?",
+      "Are you comfortable with the phrase \u2018plausible deniability\u2019 being your entire job description?",
     options: [
-      "10 or more. Several are heads of government.",
-      "3 to 5. One is a local councillor.",
-      "1. My uncle knows a magistrate.",
-      "I prefer to stand on my own merits.",
+      "Absolutely. It is, in fact, already my job description.",
+      "I am more comfortable with \u2018strategic ambiguity.\u2019",
+      "I would need a definition of \u2018plausible.\u2019",
+      "I prefer to have actual responsibilities.",
     ],
     qualifyingIndex: 0,
   },
   {
     question:
-      "Have you ever operated in a jurisdiction with lax regulatory oversight?",
+      "Can you name at least two Supreme Court justices who have never visited your island?",
     options: [
-      "Yes. Multiple jurisdictions. Simultaneously.",
-      "Once, briefly, in the early 2000s.",
-      "No — I take compliance very seriously.",
-      "I am not sure what a jurisdiction is.",
+      "Yes. At least two. Possibly three.",
+      "I can name one. He stopped visiting in 2018.",
+      "Several have visited adjacent islands. Does that count?",
+      "I do not have an island. I feel this disqualifies me.",
     ],
     qualifyingIndex: 0,
   },
@@ -222,7 +222,7 @@ function QuizResult({ result, score, onRetake }: QuizResultProps): React.JSX.Ele
         <p className="text-navy/70 max-w-sm leading-relaxed">
           {isQualified
             ? "Our team will be in touch. Please do not contact us. We will find you."
-            : "We suggest further grooming of your application before reapplying. Consider acquiring an island."}
+            : "Thank you for your interest. Your application has been misplaced."}
         </p>
 
         <p className="text-xs text-navy/40 italic">

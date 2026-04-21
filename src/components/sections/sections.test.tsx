@@ -54,7 +54,7 @@ describe("MissionSection", () => {
 
   it("contains the mission copy", () => {
     render(<MissionSection />);
-    expect(screen.getByText(/Epstein Compliance Framework/i)).toBeInTheDocument();
+    expect(screen.getByText(/inserted himself into it/i)).toBeInTheDocument();
   });
 
   it("has the correct section id", () => {

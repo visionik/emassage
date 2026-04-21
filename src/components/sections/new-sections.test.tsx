@@ -21,7 +21,7 @@ describe("StatsBar", () => {
   it("renders stat labels", () => {
     render(<StatsBar />);
     expect(screen.getByText(/Years of Operation/i)).toBeInTheDocument();
-    expect(screen.getByText(/Client Retention Rate/i)).toBeInTheDocument();
+    expect(screen.getByText(/Client Retention/i)).toBeInTheDocument();
     expect(screen.getByText(/Successful Prosecutions/i)).toBeInTheDocument();
   });
 
@@ -65,14 +65,14 @@ describe("FaqSection", () => {
 
   it("answers are hidden by default", () => {
     render(<FaqSection />);
-    expect(screen.queryByText(/That is not a question we answer/i)).not.toBeInTheDocument();
+    expect(screen.queryByText(/official findings of the United States/i)).not.toBeInTheDocument();
   });
 
   it("expands an answer on click", () => {
     render(<FaqSection />);
     const firstQuestion = screen.getByText(FAQ_ITEMS[0]!.question);
     fireEvent.click(firstQuestion);
-    expect(screen.getByText(/That is not a question we answer/i)).toBeInTheDocument();
+    expect(screen.getByText(/official findings of the United States/i)).toBeInTheDocument();
   });
 
   it("collapses an answer on second click", () => {
@@ -80,7 +80,7 @@ describe("FaqSection", () => {
     const firstQuestion = screen.getByText(FAQ_ITEMS[0]!.question);
     fireEvent.click(firstQuestion);
     fireEvent.click(firstQuestion);
-    expect(screen.queryByText(/That is not a question we answer/i)).not.toBeInTheDocument();
+    expect(screen.queryByText(/official findings of the United States/i)).not.toBeInTheDocument();
   });
 
   it("has the correct section id", () => {

@@ -4,17 +4,17 @@ const STATS = [
   {
     figure: "30+",
     label: "Years of Operation",
-    footnote: "approximately",
+    footnote: "Approximately.",
   },
   {
     figure: "100%",
-    label: "Client Retention Rate",
-    footnote: "They don't leave",
+    label: "Client Retention",
+    footnote: "They don't leave.",
   },
   {
     figure: "0",
     label: "Successful Prosecutions",
-    footnote: "to date",
+    footnote: "To date.",
   },
 ] as const;
 

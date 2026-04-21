@@ -36,7 +36,7 @@ export const TESTIMONIALS: Testimonial[] = [
   },
   {
     quote:
-      "I have experienced massage services on four continents. Epstein's is the only establishment where I was never once asked to provide identification.",
+      "Five stars. Would recommend. Have already recommended. Records of recommendation have been destroyed.",
     name: "B.C.",
     title: "Distinguished Philanthropist",
   },
